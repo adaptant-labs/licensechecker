@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:8dd6663207b795abbe94a20d2785c9eb16be59183f5468e8816f98aeda466c7f"
+  name = "github.com/rendon/testcli"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "6283090d169f51a2410b4e260341a01c9a4c0ca7"
+
+[[projects]]
   digest = "1:e60f2f1cd2e8dfdea48c2440c303d103266e754ab1d8b75796a4e4caddb7a68c"
   name = "github.com/tealeg/xlsx"
   packages = ["."]
@@ -29,6 +37,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/rendon/testcli",
     "github.com/tealeg/xlsx",
     "github.com/texttheater/golang-levenshtein/levenshtein",
     "github.com/urfave/cli"

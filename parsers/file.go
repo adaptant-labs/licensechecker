@@ -24,7 +24,7 @@ func walkGitDirectory(directory string, files *[]string) error {
 		return errors.New("Git command not found")
 	}
 
-	cmd := exec.Command("git", "ls-files")
+	cmd := exec.Command("git", "ls-files", "--recurse-submodules")
 	cmd.Stdout = &stdout
 
 	// Make sure the command is executed from within the repository
@@ -99,7 +99,6 @@ func walkDirectory(directory string, rootLicenses [][]LicenseMatch, output *chan
 			if Debug {
 				printDebug(err.Error())
 			}
-
 		}
 	}
 

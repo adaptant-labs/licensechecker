@@ -48,7 +48,7 @@ func walkGitDirectory(directory string, files *[]string) error {
 
 	if err != nil && err != io.EOF {
 		// Clear out any partially constructed file list
-		files = nil
+		*files = nil
 
 		return errors.New("failed to iterate file list from git")
 	}

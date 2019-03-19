@@ -52,7 +52,7 @@ func walkGitDirectory(directory string, files *[]string) error {
 			// with, and so must pick out excluded directories
 			// manually. In this case we match on directory paths
 			// both at the root of the tree and as subdirectories.
-			match, _ := regexp.MatchString("^|/" + black + "/", file)
+			match, _ := regexp.MatchString("^" + black + "/|/" + black + "/", file)
 			if match == true {
 				add = false
 			}

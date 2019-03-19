@@ -78,7 +78,7 @@ func main() {
 		},
 		cli.BoolFlag{
 			Name:        "trace",
-			Usage:       "Set to enable debug output",
+			Usage:       "Set to enable trace output",
 			Destination: &parsers.Trace,
 		},
 	}

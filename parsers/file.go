@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 	"sync"
@@ -37,13 +38,29 @@ func walkGitDirectory(directory string, files *[]string) error {
 	}
 
 	for {
+		add := true
+
 		file, err := stdout.ReadString('\n')
 		if err != nil {
 			break
 		}
 
 		file = strings.TrimRight(file, "\r\n")
-		*files = append(*files, file)
+
+		for _, black := range strings.Split(PathBlacklist, ",") {
+			// In the git case we only have a file list to work
+			// with, and so must pick out excluded directories
+			// manually. In this case we match on directory paths
+			// both at the root of the tree and as subdirectories.
+			match, _ := regexp.MatchString("^|/" + black + "/", file)
+			if match == true {
+				add = false
+			}
+		}
+
+		if add == true {
+			*files = append(*files, file)
+		}
 	}
 
 	if err != nil && err != io.EOF {

@@ -25,18 +25,6 @@
 #   unused-packages = true
 
 [[constraint]]
-  branch = "master"
-  name = "github.com/boyter/golangvectorspace"
-
-[[constraint]]
-  name = "github.com/briandowns/spinner"
-  version = "1.0.0"
-
-[[constraint]]
-  name = "github.com/ryanuber/columnize"
-  version = "2.1.0"
-
-[[constraint]]
   name = "github.com/urfave/cli"
   version = "1.20.0"
 
@@ -47,3 +35,7 @@
 [[constraint]]
   name = "github.com/tealeg/xlsx"
   version = "1.0.3"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/rendon/testcli"

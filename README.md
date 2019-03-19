@@ -13,7 +13,7 @@ It can produce report outputs as valid [SPDX](https://spdx.org/), CSV, XLSX, JSO
 
 [![Build Status](https://travis-ci.org/boyter/lc.svg?branch=master)](https://travis-ci.org/boyter/lc)
 
-Dual-licensed under MIT or the [UNLICENSE](http://unlicense.org).
+Dual-licensed under the MIT and [UNLICENSE](http://unlicense.org) licenses.
 
 ### Why
 
@@ -60,26 +60,23 @@ USAGE:
    lc [global options] [DIRECTORY|FILE] [DIRECTORY|FILE]
 
 VERSION:
-   1.3.0
+   2.0.0
 
 COMMANDS:
      help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --format csv, -f csv                                Set output format, supports progress, tabular, json, spdx, summary, xlsx or csv (default: "tabular")
+   --format csv, -f csv                                Set output format, supports progress, tabular, json, spdx, xlsx or csv (default: "tabular")
    --output FILE, -o FILE                              Set output file if not set will print to stdout FILE
-   --confidence 0.95, -c 0.95                          Set required confidence level for licence matching between 0 and 1 E.G. 0.95 (default: "0.85")
-   --deepguess true, --dg true                         Should attempt to deep guess the licence false or true true (default: "true")
-   --filesize 50000, --fs 50000                        How large a file in bytes should be processed 50000 (default: "50000")
-   --licensefiles copying,readme, --lf copying,readme  Possible license files to inspect for over-arching license as comma seperated list copying,readme (default: "license,licence,copying,readme")
+   --filesize 50000, --fs 50000                        How large a file in bytes should be processed 50000 (default: 50000)
+   --licensefiles copying,readme, --lf copying,readme  Possible license files to inspect for over-arching license as comma separated list copying,readme (default: "license,licence,lisence,lisense,copying,readme,legal,copyright,copyleft,gpl,bsd,mit,apache")
    --pathblacklist .git,.hg,.svn, --pbl .git,.hg,.svn  Which directories should be ignored as comma seperated list .git,.hg,.svn (default: ".git,.hg,.svn")
-   --extblacklist gif,jpg,png, --xbl gif,jpg,png       Which file extensions should be ignored for deep analysis as comma seperated list E.G. gif,jpg,png (default: "woff,eot,cur,dm,xpm,emz,db,scc,idx,
-mpp,dot,pspimage,stl,dml,wmf,rvm,resources,tlb,docx,doc,xls,xlsx,ppt,pptx,msg,vsd,chm,fm,book,dgn,blines,cab,lib,obj,jar,pdb,dll,bin,out,elf,so,msi,nupkg,pyc,ttf,woff2,jpg,jpeg,png,gif,bmp,psd,tif,tif
-f,yuv,ico,xls,xlsx,pdb,pdf,apk,com,exe,bz2,7z,tgz,rar,gz,zip,zipx,tar,rpm,bin,dmg,iso,vcd,mp3,flac,wma,wav,mid,m4a,3gp,flv,mov,mp4,mpg,rm,wmv,avi,m4v,sqlite,class,rlib,ncb,suo,opt,o,os,pch,pbm,pnm,ppm
-,pyd,pyo,raw,uyv,uyvy,xlsm,swf")
+   --extblacklist gif,jpg,png, --xbl gif,jpg,png       Which file extensions should be ignored for deep analysis as comma separated list E.G. gif,jpg,png (default: "woff,eot,cur,dm,xpm,emz,db,scc,idx,mpp,dot,pspimage,stl,dml,wmf,rvm,resources,tlb,docx,doc,xls,xlsx,ppt,pptx,msg,vsd,chm,fm,book,dgn,blines,cab,lib,obj,jar,pdb,dll,bin,out,elf,so,msi,nupkg,pyc,ttf,woff2,jpg,jpeg,png,gif,bmp,psd,tif,tiff,yuv,ico,xls,xlsx,pdb,pdf,apk,com,exe,bz2,7z,tgz,rar,gz,zip,zipx,tar,rpm,bin,dmg,iso,vcd,mp3,flac,wma,wav,mid,m4a,3gp,flv,mov,mp4,mpg,rm,wmv,avi,m4v,sqlite,class,rlib,ncb,suo,opt,o,os,pch,pbm,pnm,ppm,pyd,pyo,raw,uyv,uyvy,xlsm,swf")
    --documentname LicenseChecker, --dn LicenseChecker  SPDX only. Sets DocumentName E.G. LicenseChecker (default: "Unknown")
    --packagename LicenseChecker, --pn LicenseChecker   SPDX only. Sets PackageName E.G. LicenseChecker (default: "Unknown")
    --documentnamespace value, --dns value              SPDX only. Sets DocumentNamespace, if not set will default to http://spdx.org/spdxdocs/[packagename]-[HASH]
+   --debug                                             Set to enable debug output
+   --trace                                             Set to enable trace output
    --help, -h                                          show help
    --version, -v                                       print the version
 ```

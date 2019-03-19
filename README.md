@@ -13,7 +13,7 @@ It can produce report outputs as valid [SPDX](https://spdx.org/), CSV, XLSX, JSO
 
 [![Build Status](https://travis-ci.org/boyter/lc.svg?branch=master)](https://travis-ci.org/boyter/lc)
 
-Dual-licensed under MIT or the [UNLICENSE](http://unlicense.org).
+Dual-licensed under the MIT and [UNLICENSE](http://unlicense.org) licenses.
 
 ### Why
 

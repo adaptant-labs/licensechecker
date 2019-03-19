@@ -12,9 +12,9 @@
 
 * Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
 
-* Before submitting, please specify that you explicitly licence your contribution under GPL-3.0-only.
+* By contributing your code, you explicitly agree to dual-licence your contribution under the MIT and [UNLICENSE](http://unlicense.org) licenses.
 
-* If you include compatible code from a third party souce with an altunate license please add a SDPX tag to indicate this, see https://github.com/boyter/lc/blob/master/parsers/helpers.go bytesToHuman function as a reference exmaple.
+* If you include compatible code from a third party souce with an alternate license please add a SDPX tag to indicate this, see https://github.com/boyter/lc/blob/master/parsers/helpers.go bytesToHuman function as a reference exmaple.
 
 
 #### **Always remember**
